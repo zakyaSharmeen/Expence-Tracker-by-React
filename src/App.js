@@ -1,24 +1,13 @@
-import logo from "./logo.svg";
+import { Outlet, useNavigate } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-import Balance from "./components/Balance";
-import Incomexpence from "./components/Incomexpence";
-import Transactionlist from "./components/Transactionlist";
-import Addtransition from "./components/Addtransition";
-import { GlobalProvider } from "./context/Globalstate";
-
-function App() {
+// import AppRoutes from "./config/routeConfig";
+const App = () => {
   return (
-    <GlobalProvider>
-      <Header />
-      <div className="container">
-        <Balance />
-        <Incomexpence />
-        <Transactionlist />
-        <Addtransition />
-      </div>
-    </GlobalProvider>
+    <>
+      <Outlet />
+      {/* <AppRoutes /> */}
+    </>
   );
-}
+};
 
 export default App;
